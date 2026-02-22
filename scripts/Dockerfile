@@ -17,13 +17,19 @@ RUN apt-get install -y --no-install-recommends \
     dbus dbus-x11 x11-utils xorg alsa-utils mesa-utils net-tools \
     libgl1-mesa-dri gtk2-engines lxappearance fonts-droid-fallback sudo firefox \
     ubuntu-gnome-default-settings curl gnupg lxde arc-theme \
-    gtk2-engines-murrine gtk2-engines-pixbuf gnome-themes-standard nano xterm
+    gtk2-engines-murrine gtk2-engines-pixbuf gnome-themes-standard nano xterm vim
 
 # install dependencies for Vivado
 RUN apt-get install -y --no-install-recommends \
     python3-pip python3-dev build-essential git gcc-multilib g++ \
     ocl-icd-opencl-dev libjpeg62-dev libc6-dev-i386 graphviz make \
-    unzip libtinfo5 xvfb libncursesw5 locales libswt-gtk-4-jni
+    unzip xvfb locales libswt-gtk-4-jni \
+    libtinfo5 libncurses5 libncurses5-dev libncursesw5
+
+# install dependencies for Vitis 
+RUN apt-get install -y --no-install-recommends \
+    zip libnss3 libnss3-dev libgdk-pixbuf2.0-dev libgtk-3-dev \
+    libxss-dev libasound2 openssl fdisk libsecret-1-dev libsecret-1-0
 
 # install vnc server (with recommended installs)
 RUN apt-get install -y \

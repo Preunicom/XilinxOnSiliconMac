@@ -12,5 +12,7 @@ installer/
 .Xauthority
 .dbus/
 .vnc/
+.bash_history
+.pki/
 .xsession-errors
 scripts/install_bin

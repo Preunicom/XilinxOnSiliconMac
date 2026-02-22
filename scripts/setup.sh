@@ -123,7 +123,7 @@ fi
 # make sure that Docker is installed
 start_docker
 
-# Attempt to enable Rosetta and set swap to at least 2GiB in Docker
+# Prompt the user to enable Rosetta and set swap to at least 4GiB in Docker
 eval "$script_dir/configure_docker.sh"
 
 # Generate the Docker image
@@ -155,4 +155,4 @@ mkdir "$script_dir/../Desktop"
 
 # Start container
 f_echo "Now, the container is started (only terminal, no GUI) and the actual installation process begins."
-docker run --init -it --rm --name vivado_container --mount type=bind,source="$script_dir/..",target="/home/user" -p 127.0.0.1:5901:5901 --platform linux/amd64 x64-linux sudo -H -u user bash /home/user/scripts/install_vivado.sh
+docker run --init -it --rm --name xilinx_container --mount type=bind,source="$script_dir/..",target="/home/user" -p 127.0.0.1:5901:5901 --platform linux/amd64 xilinx-x64 sudo -H -u user bash /home/user/scripts/install_vivado.sh
