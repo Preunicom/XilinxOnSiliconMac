@@ -1,19 +1,15 @@
-# vivado-on-silicon-mac
-This is a tool for installing [Vivado™](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools.html) on Arm®-based Apple Silicon Macs in a Rosetta-enabled virtual machine. It is in no way associated with Xilinx or AMD.
-
-*Updated for 2024!*
+# XilinxOnSiliconMac
+This is a tool for installing [Vivado™ and Vitis™](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools.html) on Arm®-based Apple Silicon Macs in a Rosetta-enabled virtual machine. It is in no way associated with Xilinx or AMD.
+This tool is based on vivado-on-silicon-mac by ichi4096.
+Thanks for the great work!
 
 The supported versions are:
-- 2021.1
-- 2022.2
-- 2023.1
-- 2023.2
-- 2024.1
+- 2025.2
 
 Due to unexpected behaviour in Rosetta emulation, most versions of macOS 14 (including 14.5) are not supported. macOS 13 may work, but the above versions were tested on macOS 15.
 
 ## How to install
-Expect the installation process to last about one to two hours and download ~20 GB for the web installer.
+Expect the installation process to last about one to two hours and download ~35 GB for the web installer.
 
 ### Preparations
 You first need to install [Docker®](https://www.docker.com/products/docker-desktop/) (make sure to choose "Apple Chip" instead of "Intel Chip"). You may find it useful to disable the option "Open Docker Dashboard when Docker Desktop starts".
@@ -45,7 +41,7 @@ inside the terminal. The container can be stopped by pressing `Ctrl-C` inside th
 
 USB flashing support is limited, see the "USB Connection" paragraph below.
 
-If you want to exchange files with the container, you need to store them inside the "vivado-on-silicon-mac-main" folder. Inside Vivado, the files will be accessible via the "/home/user" folder.
+If you want to exchange files with the container, you need to store them inside the "XilinxOnSiliconMac-main" folder. Inside Vivado, the files will be accessible via the "/home/user" folder.
 
 You can allocate more/less memory and CPU resources to Vivado by going to the Resources tab in the Docker settings.
 
@@ -79,7 +75,7 @@ This version of xvcd only supports the FT2232C chip. There are forks of this sof
 - `header.sh`: Common shell functions
 - `setup.sh`: Setup file, to be run once in the beginning
 - `start_container.sh`: Starts the container and "Screen Sharing" session
-- `configure_docker.sh`: Automatically set necessary Docker settings
+- `configure_docker.sh`: Prompts the user to set necessary Docker settings
 - `gen_image.sh`: Generates the Docker image to be used according to the Dockerfile
 - `hashes.sh`: Contains the hashes of installer files and associated Vivado versions
 - `linux_start.sh`: Docker container start script
