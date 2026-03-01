@@ -7,6 +7,9 @@ script_dir=$(dirname -- "$(readlink -nf $0)";)
 source "$script_dir/header.sh"
 validate_linux
 
+# Change working directory to a writable folder to allow Vivado to write its logs.
+cd /home/user/VivadoLogs
+
 export LD_PRELOAD="/lib/x86_64-linux-gnu/libudev.so.1 /lib/x86_64-linux-gnu/libselinux.so.1 /lib/x86_64-linux-gnu/libz.so.1 /lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0"
 
 # if Vivado is installed
