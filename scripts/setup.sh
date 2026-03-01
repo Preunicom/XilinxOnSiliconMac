@@ -153,6 +153,9 @@ mkdir -p "$script_dir/../.config/autostart"
 cp "$script_dir/de_start.desktop" "$script_dir/../.config/autostart/de_start.desktop"
 mkdir "$script_dir/../Desktop"
 
+# Creates log folder if it does not exist to start vivado in which then is writable by vivado.
+mkdir -p "$scrip_dir/../VivadoLogs"
+
 # Start container
 f_echo "Now, the container is started (only terminal, no GUI) and the actual installation process begins."
 docker run --init -it --rm --name xilinx_container --mount type=bind,source="$script_dir/..",target="/home/user" -p 127.0.0.1:5901:5901 --platform linux/amd64 xilinx-x64 sudo -H -u user bash /home/user/scripts/install_vivado.sh
