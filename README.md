@@ -57,6 +57,11 @@ You may download via `git` instead of downloading the ZIP file and/or modify the
 
 Installation on external storage media may work but can cause issues, such as a file system (like FAT32, exFAT, NTFS) that does not support UNIX file permissions.
 
+### Known Bugs
+
+Vitis can not be launched through Vivado.
+It has to be started manually.
+
 ## Installing other software
 If you want to use additional Ubuntu packages, specify them in the Dockerfile. If you want to install further AMD / Xilinx software, you can do so by copying the corresponding installer into the folder containing the Vivado installation and launching it via the GUI. __Attention!__ You must install it into the folder `/home/user/Xilinx` because any data outside of `/home/user` does not persist between VM reboots. You can even skip installing Vivado entirely by commenting out the last line of `setup.sh`. I do not plan on supporting this out of the box.
 
