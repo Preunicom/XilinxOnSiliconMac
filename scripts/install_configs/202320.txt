@@ -10,7 +10,7 @@ Destination=/home/user/Xilinx
 Modules=Virtex UltraScale+ HBM:1,Kintex UltraScale:1,Vitis Networking P4:1,Artix UltraScale+:1,Spartan-7:1,Artix-7:1,Virtex UltraScale+:1,Vitis Model Composer(Toolbox for MATLAB and Simulink. Includes the functionality of System Generator for DSP):1,DocNav:1,Zynq UltraScale+ MPSoC:1,Zynq-7000:1,Virtex UltraScale+ 58G:1,Vitis Embedded Development:1,Kintex-7:1,Install Devices for Kria SOMs and Starter Kits:1,Kintex UltraScale+:1
 
 # Choose the post install scripts you'd like to run as part of the finalization step. Please note that some of these scripts may require user interaction during runtime.
-InstallOptions=Acquire or Manage a License Key:0
+InstallOptions=
 
 ## Shortcuts and File associations ##
 # Choose whether Start menu/Application menu shortcuts will be created or not.
