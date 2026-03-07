@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Launch Vivado Start Script
+Comment=Launch Vivado Start Script
+Exec=/usr/bin/lxterminal -e '/home/user/scripts/start_vivado.sh'
