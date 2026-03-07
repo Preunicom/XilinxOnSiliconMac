@@ -18,9 +18,11 @@ then
 	# Make Vivado connect to the xvcd server running on macOS (the version number can be above and below the Vivado folder level depending on the Vivado version)
 	if  [ -d "/home/user/Xilinx/Vitis" ]
 	then
+		/home/user/Xilinx/Vitis/*/bin/hw_server -e "set auto-open-servers     xilinx-xvc:host.docker.internal:2542" &
 		source /home/user/Xilinx/Vitis/*/settings64.sh
 		vitis
 	else
+		/home/user/Xilinx/*/Vitis/bin/hw_server -e "set auto-open-servers     xilinx-xvc:host.docker.internal:2542" &
 		source /home/user/Xilinx/*/Vitis/settings64.sh
 		vitis
 	fi
