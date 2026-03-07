@@ -3,7 +3,7 @@
 # This script is run whenever the desktop environment has started.
 # (with normal user privileges).
 
-script_dir=$(dirname -- "$(readlink -nf $0)";)
+script_dir="/home/user/scripts"
 source "$script_dir/header.sh"
 validate_linux
 
