@@ -148,13 +148,16 @@ else
 fi
 echo ""
 
-# copy de_start.desktop autostart file
+# copy start_vivado.desktop autostart file
 mkdir -p "$script_dir/../.config/autostart"
-cp "$script_dir/de_start.desktop" "$script_dir/../.config/autostart/de_start.desktop"
+cp "$script_dir/start_vivado.desktop" "$script_dir/../.config/autostart/start_vivado.desktop"
 mkdir "$script_dir/../Desktop"
+# Copy start scripts to desktop
+cp "$script_dir/start_vivado.desktop" "$script_dir/../Desktop/start_vivado.desktop"
+cp "$script_dir/start_vitis.desktop" "$script_dir/../Desktop/start_vitis.desktop"
 
-# Creates log folder if it does not exist to start vivado in which then is writable by vivado.
-mkdir -p "$scrip_dir/../VivadoLogs"
+# Creates log folder if it does not exist to start vivado/vitis in which then is writable by vivado/vitis.
+mkdir -p "$scrip_dir/../XilinxLogs"
 
 # Start container
 f_echo "Now, the container is started (only terminal, no GUI) and the actual installation process begins."
