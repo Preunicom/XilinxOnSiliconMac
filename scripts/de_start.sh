@@ -15,10 +15,10 @@ export LD_PRELOAD="/lib/x86_64-linux-gnu/libudev.so.1 /lib/x86_64-linux-gnu/libs
 # if Vivado is installed
 if [ -d "/home/user/Xilinx" ]
 then
-	# Make Vivado connect to the xvcd server running on macOS
-	/home/user/Xilinx/*/Vivado/bin/hw_server -e "set auto-open-servers     xilinx-xvc:host.docker.internal:2542" &
-	/home/user/Xilinx/*/Vivado/settings64.sh
-	/home/user/Xilinx/*/Vivado/bin/vivado
+	# Make Vivado connect to the xvcd server running on macOS (the version number can be above and below the Vivado folder level depending on the Vivado version)
+	/home/user/Xilinx/*/Vivado/*/bin/hw_server -e "set auto-open-servers     xilinx-xvc:host.docker.internal:2542" &
+	/home/user/Xilinx/*/Vivado/*/settings64.sh
+	/home/user/Xilinx/*/Vivado/*/bin/vivado
 else
 	f_echo "The installation is incomplete."
 	wait_for_user_input
