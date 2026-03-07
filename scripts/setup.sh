@@ -157,7 +157,7 @@ cp "$script_dir/start_vivado.desktop" "$script_dir/../Desktop/start_vivado.deskt
 cp "$script_dir/start_vitis.desktop" "$script_dir/../Desktop/start_vitis.desktop"
 
 # Creates log folder if it does not exist to start vivado/vitis in which then is writable by vivado/vitis.
-mkdir -p "$scrip_dir/../XilinxLogs"
+mkdir -p "$script_dir/../XilinxLogs"
 
 # Start container
 f_echo "Now, the container is started (only terminal, no GUI) and the actual installation process begins."
