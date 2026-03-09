@@ -6,6 +6,11 @@ script_dir=$(dirname -- "$(readlink -nf $0)";)
 source "$script_dir/header.sh"
 validate_macos
 
+# Delete the pcmanfm socket if it wasn't deleted after the last session so the desktop will show
+if [[ -f "$script_dir/../.cache/pcmanfm-socket--1" ]]; then
+    rm "$script_dir/../.cache/pcmanfm-socket--1"
+fi
+
 # this is called when the container stops or ctrl+c is hit
 function stop_container {
     docker kill xilinx_container > /dev/null 2>&1
