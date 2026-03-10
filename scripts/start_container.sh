@@ -7,8 +7,9 @@ source "$script_dir/header.sh"
 validate_macos
 
 # Delete the pcmanfm socket if it wasn't deleted after the last session so the desktop will show
-if [[ -f "$script_dir/../.cache/pcmanfm-socket--1" ]]; then
-    rm "$script_dir/../.cache/pcmanfm-socket--1"
+if [[ -S "$script_dir/../.cache/pcmanfm-socket--1" ]]; then
+	f_echo "Cleared old pcmanfm session."
+	rm "$script_dir/../.cache/pcmanfm-socket--1"
 fi
 
 # this is called when the container stops or ctrl+c is hit

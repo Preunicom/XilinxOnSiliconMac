@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script is run whenever the desktop environment has started.
+# This script is run whenever the desktop entry is clicked.
 # (with normal user privileges).
 
 script_dir="/home/user/scripts"
