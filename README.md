@@ -4,6 +4,7 @@ This tool is based on vivado-on-silicon-mac by ichi4096.
 Thanks for the great work!
 
 The supported versions are:
+- 2023.2
 - 2025.2
 
 Due to unexpected behaviour in Rosetta emulation, most versions of macOS 14 (including 14.5) are not supported. macOS 13 may work, but the above versions were tested on macOS 15.
@@ -20,12 +21,11 @@ You will also need the Vivado installer file (the "Linux® Self Extracting Web I
 
 
 ### Installation
-1. Download this [tool](https://github.com/ichi4096/vivado-on-silicon-mac/archive/refs/heads/main.zip).
-2. Extract the ZIP file.
-3. Copy the Vivado installer into the extracted folder.
-4. Open a terminal. Then copy & paste:
+1. Download or clone this repo.
+2. Copy the Vivado installer into the repo root folder.
+3. Open a terminal. Then copy & paste:
 ```
-cd Downloads/vivado-on-silicon-mac-main
+cd <repo>
 caffeinate -dim zsh ./scripts/setup.sh
 ```
 5. Follow the instructions (in yellow) from the terminal.
@@ -35,7 +35,7 @@ Note that the installation requires You to log into Your AMD account. When asked
 ### Usage
 Run
 ```
-Downloads/vivado-on-silicon-mac-main/scripts/start_container.sh
+<repo>/scripts/start_container.sh
 ```
 inside the terminal. The container can be stopped by pressing `Ctrl-C` inside the terminal or by logging out inside the container.
 
