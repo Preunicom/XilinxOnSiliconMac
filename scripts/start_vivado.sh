@@ -31,6 +31,7 @@ then
 		/home/user/Xilinx/*/Vivado/settings64.sh
 		/home/user/Xilinx/*/Vivado/bin/vivado
 	fi
+	wait_for_user_input
 else
 	f_echo "The installation is incomplete."
 	wait_for_user_input

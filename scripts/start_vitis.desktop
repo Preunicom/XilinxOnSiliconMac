@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Name=Launch Vitis Start Script
+Name=Vitis
 Comment=Launch Vitis Start Script
 Exec=/usr/bin/lxterminal -e '/home/user/scripts/start_vitis.sh'

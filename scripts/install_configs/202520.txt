@@ -23,7 +23,7 @@ ProgramGroupFolder=AMD Adaptive SoC and FPGA Tools
 CreateShortcutsForAllUsers=0
 
 # Choose whether shortcuts will be created on the desktop or not.
-CreateDesktopShortcuts=1
+CreateDesktopShortcuts=0
 
 # Choose whether file associations will be created or not.
 CreateFileAssociation=1

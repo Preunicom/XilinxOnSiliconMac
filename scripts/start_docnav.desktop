@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Name=Launch DocNav Start Script
+Name=DocNav
 Comment=Launch DocNav Start Script
 Exec=/usr/bin/lxterminal -e '/home/user/scripts/start_docnav.sh'
