@@ -83,6 +83,11 @@ It therefore crashes silently and does not open.
 To start Vitis use the desktop entry or the start_vitis.sh script.
 This starts a new terminal with a clean environment without preloaded libraries.
 
+#### Vivado Synthesis crashes
+
+In some cases Vivado may crash during synthesis due to lack of memory.
+To avoid this it often helps to reduce the amount of jobs used for the Synthesis.
+
 ## Installing other software
 
 If you want to use additional Ubuntu packages, specify them in the Dockerfile.
