@@ -15,7 +15,8 @@ if [ -d "/home/user/Xilinx" ]
 then
 	/home/user/Xilinx/DocNav/docnav
 	f_echo "DocNav opened! Do not close this window!"
-    wait_for_user_input
+    f_echo "PRess enter to close this window."
+	read
 else
 	f_echo "The installation is incomplete."
 	wait_for_user_input

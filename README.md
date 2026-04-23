@@ -6,7 +6,7 @@ This tool is based on [vivado-on-silicon-mac by ichi4096](https://github.com/ich
 Thanks for the great work!
 
 The supported versions of Vivado are:
-- 2023.2
+- 2023.2 (Use this version if you are student at OTH Regensburg - technische Informatik (for DD/CSA/etc.))
 - 2025.2
 
 The above versions were tested on macOS 26.
@@ -87,6 +87,7 @@ This starts a new terminal with a clean environment without preloaded libraries.
 
 In some cases Vivado may crash during synthesis due to lack of memory.
 To avoid this it often helps to reduce the amount of jobs used for the Synthesis.
+I recommend using 5 jobs (and if necessary increasing the number until Vivado crashes).
 
 ## Installing other software
 

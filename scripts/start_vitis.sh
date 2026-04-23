@@ -25,7 +25,8 @@ then
 		vitis
 	fi
 	f_echo "Vitis opened! Do not close this window!"
-	wait_for_user_input
+	f_echo "Press enter to close this window."
+	read
 else
 	f_echo "The installation is incomplete."
 	wait_for_user_input
