@@ -151,11 +151,11 @@ echo ""
 # copy start_vivado.desktop autostart file
 mkdir -p "$script_dir/../.config/autostart"
 cp "$script_dir/start_vivado.desktop" "$script_dir/../.config/autostart/start_vivado.desktop"
-mkdir "$script_dir/../Desktop"
 # Copy start scripts to desktop
+mkdir "$script_dir/../Desktop"
 cp "$script_dir/start_vivado.desktop" "$script_dir/../Desktop/start_vivado.desktop"
 cp "$script_dir/start_vitis.desktop" "$script_dir/../Desktop/start_vitis.desktop"
-cp "$script_dir/start_docnav.desktop" "$script_dir/../Desktop/start_docnav.desktop"
+cp "$script_dir/start_terminal.desktop" "$script_dir/../Desktop/start_terminal.desktop"
 
 # Creates log folder if it does not exist to start vivado/vitis in which then is writable by vivado/vitis.
 mkdir -p "$script_dir/../XilinxLogs"
